@@ -41,16 +41,16 @@ func handle_connection(conn net.Conn) {
     // Loop through commands
     for {
         // Read
-        line, err := reader.ReadLine()
+        input, err := reader.ReadLine()
         if err != nil {
             // handle error
             continue
         }
 
         // Exec command and get response.
-        var response string = process_command(line)
+        response := process_command( input )
 
-        // Echo
+        // Return response
         writer.PrintfLine(response)
     }
 
