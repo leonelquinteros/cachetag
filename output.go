@@ -1,11 +1,11 @@
-package main
+package cachetag
 
 import "fmt"
 
 func out(message string) {
-	fmt.Println(message)
+    fmt.Println(message)
 }
 
 func debug_string_map(message map[string]string) {
-	fmt.Println(message)
+    fmt.Println(message)
 }
